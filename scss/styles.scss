@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap");
+
+@import "abstracts/variables";
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "base/base";
+
+@import "components/buttons";
+@import "components/cards";
+@import "components/header";
+@import "components/footer";
+@import "components/toast";
+
+@import "pages/home";
+@import "pages/carta";
+@import "pages/reservas";
+@import "pages/tienda";
+@import "pages/contacto";

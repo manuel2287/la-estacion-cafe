@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | La Estacion Cafe</title>
+    <meta name="description" content="Canales de contacto y ubicacion de La Estacion Cafe en Santa Fe.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-contacto">
+    <header class="site-header sticky-top border-bottom">
+        <nav class="navbar navbar-expand-lg container py-3" aria-label="Navegacion principal">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">La Estacion</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carta.html">Carta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a></li>
+                </ul>
+                <a class="btn btn-primary btn-sm px-4 text-uppercase fw-bold" href="reservas.html">Reservar mesa</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contacto-main py-4 py-lg-5">
+        <div class="container">
+            <header class="mb-4 contacto-header">
+                <h1 class="display-5 mb-2">Contacto y Ubicacion</h1>
+                <p class="lead mb-0">En el corazon de Santa Fe. Visitanos, escribinos por WhatsApp o consulta nuestras preguntas frecuentes.</p>
+            </header>
+
+            <section class="row g-4" aria-label="Informacion de contacto y preguntas frecuentes">
+                <article class="col-lg-9">
+                    <div class="map-wrapper mb-4">
+                        <iframe
+                            title="Mapa de ubicacion del local"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=-60.807%2C-31.707%2C-60.58%2C-31.55&layer=mapnik&marker=-31.632%2C-60.699"
+                            aria-label="Mapa del local en Santa Fe"
+                        ></iframe>
+                    </div>
+
+                </article>
+
+                <aside class="col-lg-3">
+                    <div class="d-flex flex-column gap-3">
+                        <section class="info-card p-4" aria-label="Escribinos por WhatsApp">
+                            <h2 class="h6 mb-3">Preferis escribirnos?</h2>
+                            <p class="mb-3">Respondemos en menos de 30 minutos durante el horario de apertura.</p>
+                            <a class="btn btn-primary w-100 whatsapp-btn" href="#">Reservar por WhatsApp</a>
+                        </section>
+
+                        <section class="info-card p-4" aria-label="Datos de contacto">
+                            <h2 class="h6 mb-3">Datos de contacto</h2>
+                            <h3 class="h6 mb-1">Horarios</h3>
+                            <p class="mb-3">Lun-Vie: 08:00 - 20:30<br>Sab-Dom: 09:00 - 21:00</p>
+                            <h3 class="h6 mb-1">Direccion</h3>
+                            <p class="mb-3">Av. Gral. Paz 1234<br>Santa Fe, Argentina</p>
+                            <h3 class="h6 mb-1">Email</h3>
+                            <p class="mb-0">hola@laestacioncafe.com.ar</p>
+                        </section>
+                    </div>
+                </aside>
+
+                <article class="col-lg-9">
+                    <section class="faq-block" aria-labelledby="faq-title">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h2 id="faq-title" class="mb-0">Tenes dudas?</h2>
+                            <p class="faq-kicker mb-0">Preguntas frecuentes</p>
+                        </div>
+
+                        <div class="accordion faq-accordion" id="faqContacto">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">Aceptan reservas para grupos grandes?</button>
+                                </h3>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqContacto">
+                                    <div class="accordion-body">Para grupos de mas de 8 personas, contactanos directamente por WhatsApp para coordinar el espacio y el menu.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="true" aria-controls="faq2">Tienen opciones sin lactosa o veganas?</button>
+                                </h3>
+                                <div id="faq2" class="accordion-collapse collapse show" data-bs-parent="#faqContacto">
+                                    <div class="accordion-body">Si, contamos con alternativas de leche vegetal y algunas opciones dulces o saladas aptas. Consulta disponibilidad al momento de tu visita.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Puedo llevar mi laptop y trabajar?</button>
+                                </h3>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqContacto">
+                                    <div class="accordion-body">Si, disponemos de WiFi y sectores tranquilos para estudio o trabajo durante gran parte del dia.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">Tienen estacionamiento?</button>
+                                </h3>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqContacto">
+                                    <div class="accordion-body">Contamos con espacios cercanos y zonas habilitadas para estacionar a pocos metros del local.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer text-white pt-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+                <p class="h4 m-0 text-white">La Estacion</p>
+                <nav aria-label="Enlaces de pie de pagina">
+                    <ul class="footer-links list-unstyled d-flex flex-wrap gap-3 gap-md-4 mb-0 text-uppercase fw-bold">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="carta.html">Nuestra carta</a></li>
+                        <li><a href="reservas.html">Reservas</a></li>
+                        <li><a href="tienda.html">Tienda</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-copy border-top pt-3 pb-4 text-center">
+                <p class="mb-0">&copy; 2026 La Estacion Cafe - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

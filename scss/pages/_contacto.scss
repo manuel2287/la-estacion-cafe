@@ -1,0 +1,120 @@
+.page-contacto {
+    .contacto-main {
+        background: #f4f1ed;
+    }
+
+    .contacto-header {
+        h1 {
+            font-size: clamp(2rem, 3vw, 3.2rem);
+        }
+
+        .lead {
+            color: #5f5148;
+            font-size: 1.14rem;
+        }
+    }
+
+    .map-wrapper {
+        border: 1px solid rgba(62, 45, 38, 0.14);
+        border-radius: 0.5rem;
+        overflow: hidden;
+        background: #fff;
+
+        iframe {
+            width: 100%;
+            min-height: 390px;
+            border: 0;
+            display: block;
+        }
+    }
+
+    .faq-block {
+        .faq-kicker {
+            color: var(--color-kicker);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+    }
+
+    .faq-accordion {
+        .accordion-item {
+            border: 0;
+            border-bottom: 1px solid rgba(62, 45, 38, 0.22);
+            border-radius: 0;
+            background: transparent;
+        }
+
+        .accordion-button {
+            background: transparent;
+            box-shadow: none;
+            padding-inline: 0.2rem;
+            font-weight: 700;
+            color: #3a2b24;
+
+            &:not(.collapsed) {
+                color: #3a2b24;
+            }
+        }
+
+        .accordion-button::after {
+            width: 1rem;
+            height: 1rem;
+            background-size: 1rem;
+            filter: grayscale(1) brightness(0.55);
+        }
+
+        .accordion-body {
+            padding-inline: 0.2rem;
+            color: #5b4b43;
+        }
+    }
+
+    .info-card {
+        border: 1px solid rgba(62, 45, 38, 0.12);
+        border-radius: 0.6rem;
+        background: #ddd5ca;
+
+        .h6 {
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #3a2c25;
+        }
+
+        p,
+        li {
+            color: #52443b;
+        }
+    }
+
+    .whatsapp-btn {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        padding-block: 0.72rem;
+    }
+
+    @media (max-width: 991.98px) {
+        .map-wrapper iframe {
+            min-height: 320px;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .contacto-header .lead {
+            font-size: 1rem;
+        }
+
+        .faq-block {
+            .d-flex {
+                align-items: flex-start !important;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        .map-wrapper iframe {
+            min-height: 250px;
+        }
+    }
+}

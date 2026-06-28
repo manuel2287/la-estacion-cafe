@@ -1,0 +1,27 @@
+.site-header {
+    background-color: $lienzo-claro;
+
+    .navbar {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    .navbar-collapse > .btn {
+        padding: 0.58rem 1.4rem;
+        font-size: 0.94rem;
+        letter-spacing: 0.02em;
+    }
+}
+
+.navbar-brand {
+    letter-spacing: 0.04em;
+}
+
+.site-header {
+    .navbar-nav .nav-link {
+        text-transform: uppercase;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+    }
+}

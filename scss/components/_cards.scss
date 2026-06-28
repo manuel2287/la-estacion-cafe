@@ -1,0 +1,25 @@
+.card {
+    border: 0;
+    transition: transform 0.2s ease-in-out;
+    background-color: #ffffff;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.badge {
+    align-self: flex-start;
+    display: inline-block;
+    width: fit-content;
+    min-width: 7.8rem;
+    padding: 0.38rem 0.78rem;
+    border-radius: 0.45rem;
+    background: #8c7a6b !important;
+    color: #38251b;
+    font-size: 0.68rem;
+    font-family: $font-family-sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}

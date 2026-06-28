@@ -1,0 +1,92 @@
+:root {
+    --terracota: #{$terracota};
+    --verde-vagon: #{$verde-vagon};
+    --arpillera: #{$arpillera};
+    --hierro: #{$hierro};
+    --botanico: #{$botanico};
+    --cafe: #{$cafe};
+    --polvo: #{$polvo};
+    --lienzo: #{$lienzo};
+    --crema: #{$crema};
+
+    --color-primary: #{$terracota};
+    --color-secondary: #{$cafe-oscuro};
+    --color-bg: #{$crema-fondo};
+    --color-kicker: #{$kicker-verde};
+    --color-footer: #{$footer-cafe};
+}
+
+body {
+    font-family: $font-family-sans-serif;
+    font-size: $type-body-size;
+    background-color: var(--color-bg);
+    color: var(--color-secondary);
+    line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-family-serif;
+}
+
+h1,
+.h1 {
+    font-size: clamp(2.25rem, 5vw, #{$type-h1-size});
+    font-weight: 700;
+    letter-spacing: $type-heading-tracking;
+}
+
+h2,
+.h2 {
+    font-size: clamp(1.75rem, 3.6vw, #{$type-h2-size});
+    font-weight: 700;
+    letter-spacing: $type-heading-tracking;
+}
+
+h3,
+.h3 {
+    font-size: clamp(1.35rem, 2.4vw, #{$type-h3-size});
+    font-weight: 700;
+    letter-spacing: $type-heading-tracking;
+}
+
+.subtitle,
+.subtitle-large {
+    font-family: $font-family-serif;
+    font-size: $type-subtitle-size;
+    font-weight: 500;
+}
+
+small,
+.text-small {
+    font-size: $type-small-size;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.pre-title {
+    font-size: $type-label-size;
+    font-weight: 700;
+    letter-spacing: $type-label-tracking;
+    text-transform: uppercase;
+}
+
+a {
+    font-family: $font-family-sans-serif;
+    font-weight: 700;
+}
+
+.btn,
+button {
+    font-family: $font-family-sans-serif;
+    font-weight: 700;
+    letter-spacing: $type-label-tracking;
+}
+
+.btn-sm {
+    font-size: $type-label-size;
+}

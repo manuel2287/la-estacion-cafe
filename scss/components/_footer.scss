@@ -1,0 +1,19 @@
+.site-footer {
+    background: var(--color-footer);
+}
+
+.footer-links {
+    a {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: #f0cab8;
+        }
+    }
+}
+
+.footer-copy {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}

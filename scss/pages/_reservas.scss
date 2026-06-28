@@ -1,0 +1,106 @@
+.page-reservas {
+    .reserva-main {
+        background: #f4f1ed;
+    }
+
+    .reserva-header {
+        h1 {
+            font-size: clamp(2rem, 3vw, 3.2rem);
+        }
+
+        .lead {
+            color: #5f5148;
+            font-size: 1.2rem;
+        }
+    }
+
+    .reserva-card {
+        border: 1px solid rgba(62, 45, 38, 0.2);
+        border-radius: 0.5rem;
+        background: #f7f4f0;
+
+        .form-label {
+            font-weight: 700;
+            color: #3f312a;
+        }
+
+        .form-control,
+        .form-select {
+            border-color: rgba(62, 45, 38, 0.2);
+            background: #fbf9f6;
+            min-height: 44px;
+        }
+
+        textarea.form-control {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .field-help {
+            color: #6e6058;
+            font-size: 0.82rem;
+
+            &.legal {
+                color: #4f4138;
+                font-size: 0.92rem;
+            }
+        }
+
+        .btn {
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            padding: 0.65rem 1.4rem;
+        }
+    }
+
+    .info-card {
+        border: 1px solid rgba(62, 45, 38, 0.12);
+        border-radius: 0.8rem;
+        background: #ddd5ca;
+
+        .h6 {
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #3a2c25;
+        }
+
+        p,
+        li {
+            color: #52443b;
+        }
+
+        ul {
+            padding-left: 1.1rem;
+        }
+    }
+
+    .whatsapp-btn {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        padding-block: 0.7rem;
+    }
+
+    @media (max-width: 991.98px) {
+        .reserva-card {
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .reserva-header {
+            .lead {
+                font-size: 1rem;
+            }
+        }
+
+        .reserva-card {
+            .field-help.legal {
+                font-size: 0.85rem;
+            }
+        }
+    }
+}

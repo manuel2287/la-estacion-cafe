@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portada de La Estacion Cafe. Sitio base TP2 de Desarrollo de Sitios Web con enfoque responsive y SEO on-site.">
+    <title>La Estación Café | Café de Especialidad en Santa Fe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-home">
+
+    <header class="site-header sticky-top border-bottom">
+        <nav class="navbar navbar-expand-lg container py-3" aria-label="Navegacion principal">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">La Estacion</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto home-nav-links">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carta.html">Nuestra Carta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+                <a class="btn btn-primary btn-sm px-4 text-uppercase fw-bold" href="reservas.html">Reservar mesa</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-home" aria-labelledby="titulo-portada">
+            <div class="hero-overlay">
+                <div class="container py-5">
+                    <article class="hero-copy mx-auto text-center">
+                        <h1 id="titulo-portada" class="display-4 mb-3">Un cafe para cada momento del dia</h1>
+                        <p class="lead mb-4">Granos de origen unico, baristas apasionados y un espacio disenado para el encuentro y la productividad.</p>
+                        <a class="btn btn-primary btn-lg text-uppercase fw-bold" href="tienda.html">Conoce nuestros productos</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-light py-5" aria-labelledby="recomendados-titulo">
+            <div class="container">
+                <h2 id="recomendados-titulo" class="mb-0">Recomendados del dia</h2>
+                <p class="section-kicker mb-4">Seleccion del dia</p>
+
+                <div class="row g-3 g-xl-4">
+                    <article class="col-sm-6 col-xl-3">
+                        <div class="featured-card card h-100 shadow-sm">
+                            <div class="card-body p-3">
+                                <img src="img/cappuccino.jpg" class="w-100 rounded-3 mb-3" alt="Taza de cappuccino con arte latte sobre mesa de madera">
+                                <span class="badge text-bg-light mb-2">Cafe caliente</span>
+                                <h3 class="h4 mb-1">Cappuccino clasico</h3>
+                                <p class="text-muted mb-3 small">Espresso, leche vaporizada y espuma cremosa.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">$1.800</span>
+                                    <button class="btn btn-primary btn-sm js-add-cart" type="button" data-bs-toggle="tooltip" data-bs-title="Producto agregado">+ Agregar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-sm-6 col-xl-3">
+                        <div class="featured-card card h-100 shadow-sm">
+                            <div class="card-body p-3">
+                                <img src="img/croissant.jpg" class="w-100 rounded-3 mb-3" alt="Croissant de manteca recien horneado">
+                                <span class="badge text-bg-light mb-2">Pasteleria</span>
+                                <h3 class="h4 mb-1">Croissant de manteca</h3>
+                                <p class="text-muted mb-3 small">Horneado del dia, dorado y crocante.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">$2.600</span>
+                                    <button class="btn btn-primary btn-sm js-add-cart" type="button">+ Agregar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-sm-6 col-xl-3">
+                        <div class="featured-card card h-100 shadow-sm">
+                            <div class="card-body p-3">
+                                <img src="img/tostado.jpg" class="w-100 rounded-3 mb-3" alt="Tostado caliente servido en plato">
+                                <span class="badge text-bg-light mb-2">Salado</span>
+                                <h3 class="h4 mb-1">Tostado clasico</h3>
+                                <p class="text-muted mb-3 small">Pan artesanal, jamon cocido y queso fundido.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">$4.500</span>
+                                    <button class="btn btn-primary btn-sm js-add-cart" type="button">+ Agregar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-sm-6 col-xl-3">
+                        <div class="featured-card card h-100 shadow-sm">
+                            <div class="card-body p-3">
+                                <img src="img/combo-merienda.jpg" class="w-100 rounded-3 mb-3" alt="Postre y cafe en mesa de cafeteria">
+                                <span class="badge text-bg-light mb-2">Dulce</span>
+                                <h3 class="h4 mb-1">Cheesecake de frutos rojos</h3>
+                                <p class="text-muted mb-3 small">Porcion cremosa con salsa de frutos rojos.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="price-tag">$4.100</span>
+                                    <button class="btn btn-primary btn-sm js-add-cart" type="button">+ Agregar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-band py-5" aria-labelledby="historia-titulo">
+            <div class="container">
+                <article class="story-copy text-center mx-auto">
+                    <h2 id="historia-titulo" class="display-5 mb-4">Mucho mas que cafe: un espacio disenado para el encuentro y la productividad</h2>
+                    <p class="mb-4">En el corazon de Santa Fe, con granos seleccionados de origen unico. Para estudiantes, nomades digitales y amantes del buen cafe.</p>
+                    <a class="btn btn-primary btn-lg text-uppercase fw-bold" href="contacto.html">Conoce mas sobre nosotros</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-light py-5" aria-labelledby="tienda-titulo">
+            <div class="container">
+                <article class="shop-highlight row g-4 align-items-center mx-auto">
+                    <div class="col-lg-6">
+                        <img src="img/Imagenes.jpg" class="w-100 rounded-3" alt="Variedad de bolsas de cafe y productos para llevar a casa">
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="section-kicker mb-1">Tienda online</p>
+                        <h2 id="tienda-titulo" class="mb-3">Tu cafe favorito, tambien en casa</h2>
+                        <p class="mb-4">Elegi entre cafe en grano o molido, blends seleccionados, packs especiales y accesorios pensados para preparar tu cafe favorito en casa. La misma calidad de La Estacion, lista para acompanarte en cada momento del dia.</p>
+                        <a class="btn btn-primary btn-lg text-uppercase fw-bold" href="tienda.html">Ir a la tienda</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="mainToast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">La Estacion</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+            </div>
+            <div class="toast-body">Producto agregado al carrito de ejemplo.</div>
+        </div>
+    </div>
+
+    <footer class="site-footer text-white pt-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+                <p class="h4 m-0 text-white">La Estacion</p>
+                <nav aria-label="Enlaces de pie de pagina">
+                    <ul class="footer-links list-unstyled d-flex flex-wrap gap-3 gap-md-4 mb-0 text-uppercase fw-bold">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="carta.html">Nuestra carta</a></li>
+                        <li><a href="reservas.html">Reservas</a></li>
+                        <li><a href="tienda.html">Tienda</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-copy border-top pt-3 pb-4 text-center">
+                <p class="mb-0">&copy; 2026 La Estacion Cafe - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

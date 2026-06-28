@@ -1,0 +1,19 @@
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
+    font-weight: 700;
+
+    &:active,
+    &.active,
+    &:visited {
+        color: #fff;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: darken($terracota, 8%);
+        border-color: darken($terracota, 8%);
+        color: #fff;
+    }
+}
