@@ -18,7 +18,7 @@ Antes de comenzar, asegúrate de tener instalados:
 ```bash
 # Si tienes Git instalado, clona el repositorio
 git clone <URL_DEL_REPOSITORIO>
-cd paginaweb
+cd la-estacion-cafe
 ```
 
 O descarga el archivo ZIP y extrae el contenido.
@@ -56,7 +56,7 @@ npm run watch:css
 En otra terminal, ejecuta:
 
 ```bash
-npm serve
+npm run serve
 ```
 
 El sitio se abrirá automáticamente en `http://localhost:5500`
@@ -64,14 +64,36 @@ El sitio se abrirá automáticamente en `http://localhost:5500`
 ## 📂 Estructura del Proyecto
 
 ```
-paginaweb/
+la-estacion-cafe/
 ├── index.html              # Página de inicio
 ├── carta.html              # Menú de la cafetería
 ├── reservas.html           # Página de reservas
 ├── tienda.html             # Tienda online
+├── detalle-pedido.html     # Detalle del pedido/carrito
 ├── contacto.html           # Contacto y ubicación
 ├── css/
-│   └── styles.css          # Estilos compilados (generado automáticamente)
+│   ├── styles.css          # Estilos compilados desde SCSS
+│   ├── styles.css.map      # Source map de estilos
+│   └── overrides.css       # Ajustes puntuales cargados después del CSS principal
+├── img/
+│   ├── logo_laestacion.svg
+│   ├── logo_laestacion_mobile.svg
+│   ├── logo_laestacion_white.svg
+│   ├── productos-cafe/     # Imágenes de productos de la carta
+│   └── productos-tienda/   # Imágenes de productos de la tienda
+├── js/
+│   ├── main.js             # Inicialización general de módulos
+│   └── modules/
+│       ├── add-cart-buttons.js   # Agregado de productos al carrito
+│       ├── bootstrap-ui.js       # Integraciones de Bootstrap
+│       ├── cart-header-link.js   # Icono/contador del carrito en el header
+│       ├── cart-store.js         # Persistencia del carrito en localStorage
+│       ├── filters.js            # Filtros de carta y tienda
+│       ├── format.js             # Helpers de formato
+│       ├── order-detail.js       # Render y acciones del detalle de pedido
+│       ├── products.js           # Lectura de datos desde botones de producto
+│       ├── reservations.js       # Formulario de reservas
+│       └── toasts.js             # Notificaciones
 ├── scss/                   # Estilos en SCSS
 │   ├── styles.scss         # Archivo principal
 │   ├── abstracts/
@@ -89,12 +111,10 @@ paginaweb/
 │       ├── _carta.scss     # Estilos de menú
 │       ├── _reservas.scss  # Estilos de reservas
 │       ├── _tienda.scss    # Estilos de tienda
+│       ├── _detalle-pedido.scss # Estilos del detalle de pedido
 │       └── _contacto.scss  # Estilos de contacto
-├── img/                    # Imágenes del sitio
-├── js/
-│   └── main.js             # JavaScript principal
-├── doc/                    # Documentación adicional
 ├── package.json            # Configuración del proyecto
+├── package-lock.json       # Versiones bloqueadas de dependencias
 └── README.md              # Este archivo
 ```
 
@@ -132,7 +152,7 @@ npm run build:css
 npm run watch:css
 
 # Iniciar servidor de desarrollo en localhost:5500
-npm serve
+npm run serve
 
 # Iniciar servidor en red local (para otros dispositivos)
 npm run serve:host
@@ -153,7 +173,8 @@ npm run serve:host
 - Menú completo con filtros
 - Sidebar con opciones de búsqueda
 - Grilla 3x3 de productos con paginado
-- Categorías e información nutricional
+- Botones para agregar productos al pedido
+- Acceso al detalle del pedido desde el icono del carrito cuando hay productos
 
 ### 3. **Reservas** (`reservas.html`)
 
@@ -167,9 +188,17 @@ npm run serve:host
 - Catálogo de productos para llevar
 - Filtros por tipo de café, presentación y precio
 - Cards con descripción y precio
-- Carrito de compras (simulado)
+- Carrito persistido en `localStorage`
+- Acceso al detalle del pedido desde el icono del carrito cuando hay productos
 
-### 5. **Contacto** (`contacto.html`)
+### 5. **Detalle del Pedido** (`detalle-pedido.html`)
+
+- Tabla con productos agregados desde la carta o la tienda
+- Controles para sumar, restar y eliminar productos
+- Resumen del total y campo para notas/promociones
+- Confirmación y limpieza del pedido
+
+### 6. **Contacto** (`contacto.html`)
 
 - Mapa embebido con ubicación
 - Preguntas frecuentes (FAQ)

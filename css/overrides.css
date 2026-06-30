@@ -22,3 +22,112 @@
         padding-bottom: 1rem !important;
     }
 }
+
+.site-header .navbar-collapse > .btn,
+.site-header .navbar-collapse .header-actions > .btn {
+    padding: 0.58rem 1.4rem;
+    font-size: 0.94rem;
+    letter-spacing: 0.02em;
+}
+
+.site-header .header-actions {
+    flex: 0 0 auto;
+}
+
+.site-header .cart-header-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    color: #38251b;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.site-header .cart-header-link:hover,
+.site-header .cart-header-link:focus {
+    color: #b35431;
+    transform: translateY(-1px);
+}
+
+.site-header .cart-header-icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.site-header .cart-header-count {
+    position: absolute;
+    top: -0.15rem;
+    right: -0.1rem;
+    min-width: 1.65rem;
+    height: 1.65rem;
+    padding: 0 0.35rem;
+    border-radius: 999px;
+    background: #b35431;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    line-height: 1.65rem;
+    text-align: center;
+}
+
+.page-carta .menu-card h2,
+.page-carta .menu-card .h2 {
+    line-height: 1.15;
+    min-height: 4.7rem;
+}
+
+.page-carta .menu-card .small {
+    line-height: 1.45;
+    min-height: 3.95rem;
+}
+
+.page-carta .menu-card .card-body > .d-flex {
+    gap: 0.85rem;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.page-carta .menu-card .btn {
+    flex: 0 0 auto;
+    margin-left: auto;
+    font-size: 0.82rem;
+    min-width: 10.2rem;
+    padding: 0.58rem 1rem;
+}
+
+@media (max-width: 991.98px) {
+    .site-header .header-actions {
+        width: 100%;
+        align-items: stretch !important;
+        margin-top: 0.75rem;
+    }
+
+    .site-header .header-actions > .btn {
+        flex: 1 1 auto;
+    }
+
+    .site-header .cart-header-link {
+        flex: 0 0 3rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .page-carta .menu-card h2,
+    .page-carta .menu-card .h2,
+    .page-carta .menu-card .small {
+        min-height: auto;
+    }
+
+    .page-carta .menu-card .card-body > .d-flex {
+        flex-wrap: wrap;
+    }
+
+    .page-carta .menu-card .btn {
+        flex: 1 1 100%;
+        margin-left: 0;
+        min-width: 100%;
+    }
+}

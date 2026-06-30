@@ -9,6 +9,7 @@ export const initAddCartButtons = () => {
         button.addEventListener("click", () => {
             const product = getProductFromButton(button);
             addToCart(product);
+            window.dispatchEvent(new CustomEvent("cart:updated"));
             showAddToCartMessage("Producto agregado");
         });
     });

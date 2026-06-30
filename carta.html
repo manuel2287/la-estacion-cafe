@@ -28,7 +28,17 @@
                     <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
                     <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                 </ul>
-                <a class="btn btn-primary btn-sm px-4 text-uppercase fw-bold" href="reservas.html">Reservar mesa</a>
+                <div class="header-actions d-flex align-items-center gap-2">
+                    <a class="btn btn-primary btn-sm px-4 text-uppercase fw-bold" href="reservas.html">Reservar mesa</a>
+                    <a class="cart-header-link js-cart-header-link d-none" href="detalle-pedido.html" aria-label="Ver detalle del pedido">
+                        <span class="cart-header-count js-cart-header-count" aria-hidden="true">0</span>
+                        <svg class="cart-header-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 6h1.8l1.6 9.1a2 2 0 0 0 2 1.7h6.4a2 2 0 0 0 1.9-1.4L20 10H8.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5 6H3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                            <path d="M10.2 20.2h.1M17.4 20.2h.1" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
@@ -91,7 +101,6 @@
                     <header class="mb-4">
                         <h1 class="display-5 mb-2">Nuestra carta</h1>
                         <p class="text-muted mb-0">Descubrí nuestras opciones para desayuno, merienda o una pausa especial en La Estación.</p>
-                        <a class="btn btn-outline-primary btn-sm mt-3" href="detalle-pedido.html">Ver detalle del pedido</a>
                     </header>
 
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-3 g-xl-4" id="carta-products">
