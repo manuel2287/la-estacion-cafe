@@ -73,6 +73,25 @@
     text-align: center;
 }
 
+.page-carta .sidebar-link,
+.page-tienda .sidebar-link {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+.page-carta .pagination .page-link,
+.page-tienda .pagination .page-link {
+    cursor: pointer;
+}
+
+.page-carta .pagination .disabled .page-link,
+.page-tienda .pagination .disabled .page-link {
+    cursor: default;
+}
+
 .page-carta .menu-card h2,
 .page-carta .menu-card .h2 {
     line-height: 1.15;

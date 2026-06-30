@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /detalle-pedido.html
+
+Sitemap: https://laestacioncafe.com.ar/sitemap.xml

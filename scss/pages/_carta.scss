@@ -62,7 +62,12 @@
     }
 
     .sidebar-link {
+        background: transparent;
+        border: 0;
         color: #3d2f29;
+        cursor: pointer;
+        font: inherit;
+        padding: 0;
         text-decoration: none;
 
         &:hover,
@@ -160,6 +165,7 @@
         }
 
         .page-link {
+            cursor: pointer;
             min-width: 3.2rem;
             padding: 0.75rem 1rem;
             border-width: 0 0 0 2px;
@@ -179,6 +185,7 @@
         .disabled .page-link {
             background: #f4f4f4;
             color: #b8b8b8;
+            cursor: default;
         }
 
         .active .page-link {
