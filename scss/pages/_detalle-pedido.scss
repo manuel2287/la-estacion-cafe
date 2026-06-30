@@ -1,0 +1,382 @@
+.page-detalle-pedido {
+    background: #ddd5ca;
+
+    .detalle-pedido-main {
+        background: #ddd5ca;
+        min-height: calc(100vh - 96px);
+        padding-top: 2rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    .pedido-card {
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0 !important;
+
+        > header {
+            margin-bottom: 1.65rem !important;
+
+            h1 {
+                color: #3f2d25;
+                font-size: clamp(1.8rem, 2.1vw, 2.25rem);
+                line-height: 1.12;
+                margin-bottom: 1.35rem !important;
+            }
+
+            p {
+                color: #4f4038 !important;
+                font-size: 1.16rem;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .pedido-mesa {
+        color: #3f2d25 !important;
+        font-size: 1.15rem !important;
+        font-weight: 800;
+        line-height: 1.2;
+    }
+
+    .pedido-tabla-wrap,
+    .pedido-summary-row,
+    .pedido-summary-row + .d-flex,
+    #detalle-feedback {
+        background: #fffdf9;
+    }
+
+    .pedido-tabla-wrap {
+        border: 0;
+        border-radius: 0.35rem 0.35rem 0 0;
+        margin-bottom: 0 !important;
+        overflow-x: auto;
+        padding: 2.35rem 1.85rem 0;
+    }
+
+    .pedido-tabla {
+        --bs-table-bg: transparent;
+        --bs-table-color: #3f2d25;
+        border-color: rgba(78, 59, 50, 0.14);
+        margin-bottom: 0;
+        min-width: 1040px;
+
+        th {
+            border-bottom: 1px solid rgba(78, 59, 50, 0.18);
+            color: #34261f;
+            font-size: 0.72rem;
+            font-weight: 800;
+            padding: 0 0.9rem 1.4rem;
+            white-space: nowrap;
+        }
+
+        td {
+            border-color: rgba(78, 59, 50, 0.14);
+            padding: 1.55rem 0.9rem;
+            vertical-align: middle;
+        }
+
+        tbody tr:last-child td {
+            border-bottom-color: rgba(78, 59, 50, 0.14);
+        }
+
+        td:nth-child(2),
+        td:nth-child(4) {
+            color: #3f2d25;
+            font-size: 0.82rem;
+            font-weight: 800 !important;
+        }
+
+        td:last-child {
+            text-align: center !important;
+            width: 88px;
+        }
+
+        .h6 {
+            color: #2f241f;
+            font-family: $font-family-sans-serif;
+            font-size: 0.9rem;
+            font-weight: 800;
+            line-height: 1.25;
+        }
+
+        .small {
+            color: #675850 !important;
+            font-size: 0.78rem;
+            font-weight: 500;
+            line-height: 1.35;
+            max-width: 330px;
+        }
+    }
+
+    .pedido-item-info {
+        gap: 0.9rem !important;
+        min-width: 390px;
+    }
+
+    .pedido-item-img {
+        aspect-ratio: 1.45 / 1;
+        border-radius: 0.28rem;
+        flex: 0 0 150px;
+        height: 102px;
+        object-fit: cover;
+        width: 150px;
+    }
+
+    .qty-control {
+        align-items: center;
+        background: #ebe2d8;
+        border: 1px solid rgba(78, 59, 50, 0.12);
+        border-radius: 0.12rem;
+        display: inline-grid;
+        grid-template-columns: 1.65rem 1.7rem 1.65rem;
+        height: 30px;
+        justify-content: center;
+        overflow: hidden;
+        width: 90px;
+    }
+
+    .btn-qty {
+        align-items: center;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        color: #4b3a31;
+        display: inline-flex;
+        font-size: 1.02rem;
+        font-weight: 600;
+        height: 100%;
+        justify-content: center;
+        line-height: 1;
+        padding: 0;
+        width: 100%;
+
+        &:hover,
+        &:focus {
+            background: rgba(179, 84, 49, 0.12);
+            color: #2f211b;
+        }
+    }
+
+    .qty-value {
+        color: #3d2c24;
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    .pedido-delete {
+        align-items: center;
+        color: #8c7b6c;
+        display: inline-flex;
+        flex-direction: column;
+        font-size: 0.72rem;
+        font-weight: 700;
+        gap: 0.18rem;
+        letter-spacing: 0;
+        line-height: 1.1;
+        text-decoration: none;
+
+        .delete-icon {
+            display: inline-flex;
+            height: 15px;
+            width: 15px;
+
+            svg {
+                height: 100%;
+                stroke: #b6a697;
+                width: 100%;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            color: var(--color-primary);
+            text-decoration: underline;
+        }
+    }
+
+    .pedido-summary-row {
+        border-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0 !important;
+        padding: 1.55rem 1.85rem 1.25rem;
+
+        > [class*="col-"] {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        > [class*="col-"]:last-child {
+            padding-left: 5rem;
+        }
+
+        .form-label {
+            color: #3f2d25;
+            font-size: 0.95rem;
+            font-weight: 800 !important;
+            margin-bottom: 0.75rem;
+        }
+    }
+
+    .form-control {
+        background-color: #fffdf9;
+        border-color: rgba(78, 59, 50, 0.24);
+        border-radius: 0.18rem;
+        color: #3f2d25;
+        font-size: 0.78rem;
+        min-height: 36px;
+
+        &::placeholder {
+            color: #9a8d81;
+            font-size: 0.74rem;
+        }
+
+        &:focus {
+            border-color: rgba(179, 84, 49, 0.65);
+            box-shadow: 0 0 0 0.18rem rgba(179, 84, 49, 0.14);
+        }
+    }
+
+    #pedido-notas {
+        min-height: 66px;
+        resize: vertical;
+    }
+
+    .js-apply-promo {
+        border-radius: 0.18rem;
+        font-size: 0.74rem;
+        padding: 0.55rem 0.9rem;
+    }
+
+    .pedido-total-line {
+        border-top: 0;
+        margin-top: 1.15rem;
+        padding: 0 0.85rem 0 0.25rem;
+
+        .fw-bold {
+            color: #3f2d25;
+            font-size: 0.86rem;
+            font-weight: 800 !important;
+        }
+    }
+
+    .pedido-total {
+        color: var(--color-primary);
+        font-size: 0.95rem;
+        font-weight: 800;
+    }
+
+    .pedido-summary-row + .d-flex {
+        border-radius: 0 0 0.35rem 0.35rem;
+        margin-top: 0 !important;
+        padding: 1.25rem 11.4rem 4rem 1.85rem;
+
+        .btn {
+            border-radius: 0.22rem;
+            font-size: 0.76rem;
+            min-width: 136px;
+            padding: 0.72rem 1rem;
+        }
+    }
+
+    .alert {
+        border-radius: 0.22rem;
+        font-size: 0.85rem;
+    }
+
+    #detalle-empty {
+        background: #fffdf9;
+        border-radius: 0;
+        margin-bottom: 0 !important;
+    }
+
+    #detalle-feedback {
+        border-color: rgba(84, 106, 91, 0.28);
+        margin-top: 0 !important;
+    }
+
+    @media (max-width: 1199.98px) {
+        .pedido-summary-row > [class*="col-"]:last-child {
+            padding-left: 2.5rem;
+        }
+
+        .pedido-summary-row + .d-flex {
+            padding-right: 4.35rem;
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .pedido-card > header {
+            align-items: flex-start !important;
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .pedido-mesa {
+            font-size: 1rem !important;
+        }
+
+        .pedido-tabla {
+            min-width: 820px;
+        }
+
+        .pedido-item-info {
+            min-width: 320px;
+        }
+
+        .pedido-item-img {
+            flex-basis: 112px;
+            height: 78px;
+            width: 112px;
+        }
+
+        .pedido-summary-row > [class*="col-"]:last-child {
+            padding-left: 0;
+        }
+
+        .pedido-summary-row + .d-flex {
+            padding-right: 1.85rem;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .detalle-pedido-main {
+            padding-top: 1.25rem !important;
+            padding-bottom: 2rem !important;
+        }
+
+        .pedido-card > header h1 {
+            font-size: 1.65rem;
+        }
+
+        .pedido-tabla-wrap,
+        .pedido-summary-row,
+        .pedido-summary-row + .d-flex {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .pedido-summary-row + .d-flex {
+            justify-content: stretch !important;
+            padding-bottom: 1.35rem;
+
+            .btn {
+                flex: 1 1 100%;
+            }
+        }
+
+        .pedido-summary-row .d-flex {
+            flex-wrap: wrap;
+
+            .form-control,
+            .btn {
+                flex: 1 1 100%;
+            }
+        }
+    }
+}

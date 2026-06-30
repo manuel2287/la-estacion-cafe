@@ -91,6 +91,7 @@
                     <header class="mb-4">
                         <h1 class="display-5 mb-2">Nuestra carta</h1>
                         <p class="text-muted mb-0">Descubrí nuestras opciones para desayuno, merienda o una pausa especial en La Estación.</p>
+                        <a class="btn btn-outline-primary btn-sm mt-3" href="detalle-pedido.html">Ver detalle del pedido</a>
                     </header>
 
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-3 g-xl-4" id="carta-products">
@@ -109,7 +110,7 @@
                                     </p>
                                     <div class="d-flex justify-content-between align-items-center mt-auto">
                                         <span class="menu-price">$3.200</span>
-                                        <button class="btn btn-primary btn-sm js-add-cart" type="button">
+                                        <button class="btn btn-primary btn-sm js-add-cart" type="button" data-cart-id="cappuccino-clasico-3200" data-cart-title="Cappuccino clasico" data-cart-description="Espresso, leche vaporizada y espuma cremosa." data-cart-price="3200" data-cart-image="img/productos-cafe/cafe-caliente.png">
                                             + Agregar al pedido
                                         </button>
                                     </div>
@@ -125,7 +126,7 @@
                                     <p class="small text-muted mb-3">Cafe espresso con leche fria y hielo.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-auto">
                                         <span class="menu-price">$3.500</span>
-                                        <button class="btn btn-primary btn-sm js-add-cart" type="button">
+                                        <button class="btn btn-primary btn-sm js-add-cart" type="button" data-cart-id="iced-latte-3500" data-cart-title="Iced latte" data-cart-description="Cafe espresso con leche fria y hielo." data-cart-price="3500" data-cart-image="img/productos-cafe/iced-latte.png">
                                             + Agregar al pedido
                                         </button>
                                     </div>
@@ -141,7 +142,7 @@
                                     <p class="small text-muted mb-3">Horneado del dia, dorado y crocante.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-auto">
                                         <span class="menu-price">$2.600</span>
-                                        <button class="btn btn-primary btn-sm js-add-cart" type="button">
+                                        <button class="btn btn-primary btn-sm js-add-cart" type="button" data-cart-id="croissant-manteca-2600" data-cart-title="Croissant de manteca" data-cart-description="Horneado del dia, dorado y crocante." data-cart-price="2600" data-cart-image="img/productos-cafe/croissant-manteca.png">
                                             + Agregar al pedido
                                         </button>
                                     </div>
@@ -157,7 +158,7 @@
                                     <p class="small text-muted mb-3">Pan artesanal, jamon cocido y queso fundido.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-auto">
                                         <span class="menu-price">$4.500</span>
-                                        <button class="btn btn-primary btn-sm js-add-cart" type="button">
+                                        <button class="btn btn-primary btn-sm js-add-cart" type="button" data-cart-id="tostado-clasico-4500" data-cart-title="Tostado clasico" data-cart-description="Pan artesanal, jamon cocido y queso fundido." data-cart-price="4500" data-cart-image="img/productos-cafe/tostado-clasico.png">
                                             + Agregar al pedido
                                         </button>
                                     </div>
@@ -173,7 +174,7 @@
                                     <p class="small text-muted mb-3">Blend de te seleccionado servido en tetera.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-auto">
                                         <span class="menu-price">$2.800</span>
-                                        <button class="btn btn-primary btn-sm js-add-cart" type="button">
+                                        <button class="btn btn-primary btn-sm js-add-cart" type="button" data-cart-id="te-en-hebras-2800" data-cart-title="Te en hebras" data-cart-description="Blend de te seleccionado servido en tetera." data-cart-price="2800" data-cart-image="img/productos-cafe/te-en-hebras.png">
                                             + Agregar al pedido
                                         </button>
                                     </div>
@@ -189,7 +190,7 @@
                                     <p class="small text-muted mb-3">Cafe con leche y dos medialunas.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-auto">
                                         <span class="menu-price">$5.200</span>
-                                        <button class="btn btn-primary btn-sm js-add-cart" type="button">
+                                        <button class="btn btn-primary btn-sm js-add-cart" type="button" data-cart-id="combo-merienda-5200" data-cart-title="Combo merienda" data-cart-description="Cafe con leche y dos medialunas." data-cart-price="5200" data-cart-image="img/productos-cafe/combo-merienda.png">
                                             + Agregar al pedido
                                         </button>
                                     </div>
@@ -205,7 +206,7 @@
                                     <p class="small text-muted mb-3">Cookie artesanal con chips de chocolate.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-auto">
                                         <span class="menu-price">$2.400</span>
-                                        <button class="btn btn-primary btn-sm js-add-cart" type="button">
+                                        <button class="btn btn-primary btn-sm js-add-cart" type="button" data-cart-id="cookie-chocolate-2400" data-cart-title="Cookie de chocolate" data-cart-description="Cookie artesanal con chips de chocolate." data-cart-price="2400" data-cart-image="img/productos-cafe/cookie-chocolate.png">
                                             + Agregar al pedido
                                         </button>
                                     </div>
@@ -221,7 +222,7 @@
                                     <p class="small text-muted mb-3">Bagel tostado con queso, tomate y albahaca.</p>
                                     <div class="d-flex justify-content-between align-items-center mt-auto">
                                         <span class="menu-price">$4.900</span>
-                                        <button class="btn btn-primary btn-sm js-add-cart" type="button">
+                                        <button class="btn btn-primary btn-sm js-add-cart" type="button" data-cart-id="bagel-caprese-4900" data-cart-title="Bagel caprese" data-cart-description="Bagel tostado con queso, tomate y albahaca." data-cart-price="4900" data-cart-image="img/productos-cafe/bagel-caprese.png">
                                             + Agregar al pedido
                                         </button>
                                     </div>
