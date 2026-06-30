@@ -76,10 +76,10 @@
                         <section aria-label="Filtro de precio">
                             <h3 class="h6 fw-bold mb-3">Filtrar por precio</h3>
                             <label class="visually-hidden" for="precio-rango">Rango de precio</label>
-                            <input class="form-range" id="precio-rango" type="range" min="0" max="1000" value="500">
+                            <input class="form-range js-price-range" id="precio-rango" type="range" min="0" max="6000" step="100" value="6000">
                             <div class="d-flex gap-2 mb-3">
-                                <input class="form-control form-control-sm" type="text" value="0" aria-label="Precio minimo">
-                                <input class="form-control form-control-sm" type="text" value="1000" aria-label="Precio maximo">
+                                <input class="form-control form-control-sm js-price-min" type="number" value="0" min="0" step="100" aria-label="Precio minimo">
+                                <input class="form-control form-control-sm js-price-max" type="number" value="6000" min="0" step="100" aria-label="Precio maximo">
                             </div>
                             <button class="btn btn-primary btn-sm w-100 js-apply-filters" type="button">Aplicar Filtros</button>
                             <button class="btn btn-outline-secondary btn-sm w-100 mt-2 js-filter-clear" type="button">Limpiar filtros</button>
@@ -94,7 +94,7 @@
                     </header>
 
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-3 g-xl-4" id="carta-products">
-                        <article class="col js-filter-item" data-filter-tags="cafe caliente bebidas cappuccino espresso">
+                        <article class="col js-filter-item" data-filter-tags="cafe caliente bebidas cappuccino espresso" data-price="3200">
                             <div class="card menu-card h-100 shadow-sm">
                                 <img src="img/productos-cafe/cafe-caliente.png" class="card-img-top" alt="Cappuccino clasico">
                                 <div class="card-body">
@@ -116,7 +116,7 @@
                                 </div>
                             </div>
                         </article>
-                        <article class="col js-filter-item" data-filter-tags="cafe frio bebidas iced latte espresso">
+                        <article class="col js-filter-item" data-filter-tags="cafe frio bebidas iced latte espresso" data-price="3500">
                             <div class="card menu-card h-100 shadow-sm">
                                 <img src="img/productos-cafe/iced-latte.png" class="card-img-top" alt="Iced latte">
                                 <div class="card-body">
@@ -132,7 +132,7 @@
                                 </div>
                             </div>
                         </article>
-                        <article class="col js-filter-item" data-filter-tags="pasteleria comidas croissant manteca">
+                        <article class="col js-filter-item" data-filter-tags="pasteleria comidas croissant manteca" data-price="2600">
                             <div class="card menu-card h-100 shadow-sm">
                                 <img src="img/productos-cafe/croissant-manteca.png" class="card-img-top" alt="Croissant de manteca">
                                 <div class="card-body">
@@ -148,7 +148,7 @@
                                 </div>
                             </div>
                         </article>
-                        <article class="col js-filter-item" data-filter-tags="salado comidas tostado jamon queso">
+                        <article class="col js-filter-item" data-filter-tags="salado comidas tostado jamon queso" data-price="4500">
                             <div class="card menu-card h-100 shadow-sm">
                                 <img src="img/productos-cafe/tostado-clasico.png" class="card-img-top" alt="Tostado clasico">
                                 <div class="card-body">
@@ -164,7 +164,7 @@
                                 </div>
                             </div>
                         </article>
-                        <article class="col js-filter-item" data-filter-tags="tes e infusiones infusion bebidas te hebras">
+                        <article class="col js-filter-item" data-filter-tags="tes e infusiones infusion bebidas te hebras" data-price="2800">
                             <div class="card menu-card h-100 shadow-sm">
                                 <img src="img/productos-cafe/te-en-hebras.png" class="card-img-top" alt="Te en hebras">
                                 <div class="card-body">
@@ -180,7 +180,7 @@
                                 </div>
                             </div>
                         </article>
-                        <article class="col js-filter-item" data-filter-tags="combo bebidas comidas cafe leche medialunas">
+                        <article class="col js-filter-item" data-filter-tags="combo bebidas comidas cafe leche medialunas" data-price="5200">
                             <div class="card menu-card h-100 shadow-sm">
                                 <img src="img/productos-cafe/combo-merienda.png" class="card-img-top" alt="Combo merienda">
                                 <div class="card-body">
@@ -196,7 +196,7 @@
                                 </div>
                             </div>
                         </article>
-                        <article class="col js-filter-item" data-filter-tags="pasteleria comidas cookie chocolate">
+                        <article class="col js-filter-item" data-filter-tags="pasteleria comidas cookie chocolate" data-price="2400">
                             <div class="card menu-card h-100 shadow-sm">
                                 <img src="img/productos-cafe/cookie-chocolate.png" class="card-img-top" alt="Cookie de chocolate">
                                 <div class="card-body">
@@ -212,7 +212,7 @@
                                 </div>
                             </div>
                         </article>
-                        <article class="col js-filter-item" data-filter-tags="salado comidas bagel caprese queso tomate">
+                        <article class="col js-filter-item" data-filter-tags="salado comidas bagel caprese queso tomate" data-price="4900">
                             <div class="card menu-card h-100 shadow-sm">
                                 <img src="img/productos-cafe/bagel-caprese.png" class="card-img-top" alt="Bagel caprese">
                                 <div class="card-body">

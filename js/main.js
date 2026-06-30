@@ -44,6 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const target = document.querySelector(panel.dataset.filterTarget);
         const emptyState = document.querySelector(panel.dataset.emptyTarget);
         const searchInput = panel.querySelector(".js-filter-search");
+        const priceRange = panel.querySelector(".js-price-range");
+        const priceMinInput = panel.querySelector(".js-price-min");
+        const priceMaxInput = panel.querySelector(".js-price-max");
         const activeFilters = panel.querySelector(".js-active-filters");
         const checkboxes = panel.querySelectorAll(".js-filter-check");
         const categoryLinks = panel.querySelectorAll(".js-filter-category");
@@ -78,6 +81,29 @@ document.addEventListener("DOMContentLoaded", () => {
             return selectedValues;
         };
 
+        const formatPrice = (value) => `$${Number(value).toLocaleString("es-AR")}`;
+
+        const getPriceBounds = () => {
+            const defaultMin = priceRange ? Number(priceRange.min) : 0;
+            const defaultMax = priceRange ? Number(priceRange.max) : Number.POSITIVE_INFINITY;
+            let min = priceMinInput ? Number(priceMinInput.value) : defaultMin;
+            let max = priceMaxInput ? Number(priceMaxInput.value) : defaultMax;
+
+            min = Number.isFinite(min) ? min : defaultMin;
+            max = Number.isFinite(max) ? max : defaultMax;
+
+            if (min > max) {
+                [min, max] = [max, min];
+            }
+
+            return { min, max, defaultMin, defaultMax };
+        };
+
+        const isPriceFilterActive = () => {
+            const { min, max, defaultMin, defaultMax } = getPriceBounds();
+            return min > defaultMin || max < defaultMax;
+        };
+
         const renderActiveFilters = () => {
             if (!activeFilters) {
                 return;
@@ -85,9 +111,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const values = getActiveValues();
             const searchTerm = searchInput ? searchInput.value.trim() : "";
+            const { min, max } = getPriceBounds();
+            const hasPriceFilter = isPriceFilterActive();
             activeFilters.innerHTML = "";
 
-            if (!values.length && !searchTerm) {
+            if (!values.length && !searchTerm && !hasPriceFilter) {
                 const emptyLabel = document.createElement("span");
                 emptyLabel.className = "text-muted small";
                 emptyLabel.textContent = "Sin filtros aplicados";
@@ -99,6 +127,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 activeFilters.appendChild(createFilterBadge(`Buscar: ${searchTerm}`, "search", searchTerm));
             }
 
+            if (hasPriceFilter) {
+                activeFilters.appendChild(createFilterBadge(`${formatPrice(min)} - ${formatPrice(max)}`, "price", "price"));
+            }
+
             values.forEach((value) => {
                 activeFilters.appendChild(createFilterBadge(getFilterLabel(value), "value", value));
             });
@@ -107,13 +139,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const applyFilters = () => {
             const selectedValues = getActiveValues().map(normalizeText);
             const searchTerm = searchInput ? normalizeText(searchInput.value) : "";
+            const { min, max } = getPriceBounds();
             let visibleCount = 0;
 
             items.forEach((item) => {
                 const haystack = normalizeText(`${item.dataset.filterTags || ""} ${item.textContent}`);
+                const price = Number(item.dataset.price);
                 const matchesSearch = !searchTerm || haystack.includes(searchTerm);
                 const matchesFilters = selectedValues.every((value) => haystack.includes(value));
-                const isVisible = matchesSearch && matchesFilters;
+                const matchesPrice = !Number.isFinite(price) || (price >= min && price <= max);
+                const isVisible = matchesSearch && matchesFilters && matchesPrice;
 
                 item.classList.toggle("d-none", !isVisible);
                 if (isVisible) {
@@ -132,6 +167,15 @@ document.addEventListener("DOMContentLoaded", () => {
             delete panel.dataset.activeCategory;
             if (searchInput) {
                 searchInput.value = "";
+            }
+            if (priceRange) {
+                priceRange.value = priceRange.max;
+            }
+            if (priceMinInput) {
+                priceMinInput.value = priceRange ? priceRange.min : "0";
+            }
+            if (priceMaxInput && priceRange) {
+                priceMaxInput.value = priceRange.max;
             }
             checkboxes.forEach((checkbox) => {
                 checkbox.checked = false;
@@ -154,6 +198,22 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         searchInput?.addEventListener("input", applyFilters);
+
+        priceRange?.addEventListener("input", () => {
+            if (priceMaxInput) {
+                priceMaxInput.value = priceRange.value;
+            }
+            applyFilters();
+        });
+
+        priceMinInput?.addEventListener("input", applyFilters);
+
+        priceMaxInput?.addEventListener("input", () => {
+            if (priceRange) {
+                priceRange.value = priceMaxInput.value;
+            }
+            applyFilters();
+        });
 
         checkboxes.forEach((checkbox) => {
             checkbox.addEventListener("change", applyFilters);
@@ -192,6 +252,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (badge.dataset.filterType === "search" && searchInput) {
                 searchInput.value = "";
+            } else if (badge.dataset.filterType === "price") {
+                if (priceRange) {
+                    priceRange.value = priceRange.max;
+                }
+                if (priceMinInput) {
+                    priceMinInput.value = priceRange ? priceRange.min : "0";
+                }
+                if (priceMaxInput && priceRange) {
+                    priceMaxInput.value = priceRange.max;
+                }
             } else if (badge.dataset.filterValue === panel.dataset.activeCategory) {
                 delete panel.dataset.activeCategory;
                 categoryLinks.forEach((link) => {
