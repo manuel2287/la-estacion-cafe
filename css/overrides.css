@@ -1,0 +1,24 @@
+.page-tienda .tienda-main {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+@media (max-width: 991.98px) {
+    .page-tienda .tienda-main {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+}
+
+/* Same overrides for carta page */
+.page-carta .carta-main {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+@media (max-width: 991.98px) {
+    .page-carta .carta-main {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+}
