@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /detalle-pedido.html
 
-Sitemap: https://laestacioncafe.com.ar/sitemap.xml
+Sitemap: https://manuel2287.github.io/la-estacion-cafe/sitemap.xml
