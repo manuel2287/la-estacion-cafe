@@ -50,66 +50,223 @@
                 <h2 id="recomendados-titulo" class="mb-0">Recomendados del día</h2>
                 <p class="section-kicker mb-4">Selección del día</p>
 
-                <div class="row g-3 g-xl-4">
-                    <article class="col-sm-6 col-xl-3">
-                        <div class="featured-card card h-100 shadow-sm">
-                            <div class="card-body p-3">
-                                <img src="img/productos-cafe/cafe-caliente.png" class="w-100 rounded-3 mb-3" alt="Taza de cappuccino con arte latte sobre mesa de madera">
-                                <span class="badge text-bg-light mb-2">Café caliente</span>
-                                <h3 class="h4 mb-1">Cappuccino clásico</h3>
-                                <p class="text-muted mb-3 small">Espresso, leche vaporizada y espuma cremosa.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="price-tag">$1.800</span>
-                                    <button class="btn btn-primary btn-sm js-add-cart" type="button" data-bs-toggle="tooltip" data-bs-title="Producto agregado">+ Agregar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                <div id="recomendadosCarousel" class="carousel slide recommended-carousel d-none d-md-block" data-bs-ride="carousel" data-bs-interval="4500">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#recomendadosCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Recomendados 1"></button>
+                        <button type="button" data-bs-target="#recomendadosCarousel" data-bs-slide-to="1" aria-label="Recomendados 2"></button>
+                    </div>
 
-                    <article class="col-sm-6 col-xl-3">
-                        <div class="featured-card card h-100 shadow-sm">
-                            <div class="card-body p-3">
-                                <img src="img/productos-cafe/croissant-manteca.png" class="w-100 rounded-3 mb-3" alt="Croissant de manteca recien horneado">
-                                <span class="badge text-bg-light mb-2">Pastelería</span>
-                                <h3 class="h4 mb-1">Croissant de manteca</h3>
-                                <p class="text-muted mb-3 small">Horneado del día, dorado y crocante.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="price-tag">$2.600</span>
-                                    <button class="btn btn-primary btn-sm js-add-cart" type="button">+ Agregar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row g-3 g-xl-4 justify-content-center">
+                                <article class="col-md-4">
+                                    <div class="featured-card card h-100 shadow-sm mx-auto">
+                                        <div class="card-body p-3">
+                                            <img src="img/productos-cafe/cafe-caliente.png" class="w-100 rounded-3 mb-3" alt="Taza de cappuccino con arte latte sobre mesa de madera">
+                                            <span class="badge text-bg-light mb-2">Café caliente</span>
+                                            <h3 class="h4 mb-1">Cappuccino clásico</h3>
+                                            <p class="text-muted mb-3 small">Espresso, leche vaporizada y espuma cremosa.</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="price-tag">$1.800</span>
+                                                <button class="btn btn-primary btn-sm js-add-cart" type="button" data-bs-toggle="tooltip" data-bs-title="Producto agregado">+ Agregar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
 
-                    <article class="col-sm-6 col-xl-3">
-                        <div class="featured-card card h-100 shadow-sm">
-                            <div class="card-body p-3">
-                                <img src="img/productos-cafe/tostado-clasico.png" class="w-100 rounded-3 mb-3" alt="Tostado caliente servido en plato">
-                                <span class="badge text-bg-light mb-2">Salado</span>
-                                <h3 class="h4 mb-1">Tostado clásico</h3>
-                                <p class="text-muted mb-3 small">Pan artesanal, jamón cocido y queso fundido.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="price-tag">$4.500</span>
-                                    <button class="btn btn-primary btn-sm js-add-cart" type="button">+ Agregar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                                <article class="col-md-4">
+                                    <div class="featured-card card h-100 shadow-sm mx-auto">
+                                        <div class="card-body p-3">
+                                            <img src="img/productos-cafe/croissant-manteca.png" class="w-100 rounded-3 mb-3" alt="Croissant de manteca recien horneado">
+                                            <span class="badge text-bg-light mb-2">Pastelería</span>
+                                            <h3 class="h4 mb-1">Croissant de manteca</h3>
+                                            <p class="text-muted mb-3 small">Horneado del día, dorado y crocante.</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="price-tag">$2.600</span>
+                                                <button class="btn btn-primary btn-sm js-add-cart" type="button">+ Agregar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
 
-                    <article class="col-sm-6 col-xl-3">
-                        <div class="featured-card card h-100 shadow-sm">
-                            <div class="card-body p-3">
-                                <img src="img/productos-cafe/cheesecake-frutos-rojos.png" class="w-100 rounded-3 mb-3" alt="Cheesecake de frutos rojos">
-                                <span class="badge text-bg-light mb-2">Dulce</span>
-                                <h3 class="h4 mb-1">Cheesecake de frutos rojos</h3>
-                                <p class="text-muted mb-3 small">Porción cremosa con salsa de frutos rojos.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="price-tag">$4.100</span>
-                                    <button class="btn btn-primary btn-sm js-add-cart" type="button">+ Agregar</button>
-                                </div>
+                                <article class="col-md-4">
+                                    <div class="featured-card card h-100 shadow-sm mx-auto">
+                                        <div class="card-body p-3">
+                                            <img src="img/productos-cafe/tostado-clasico.png" class="w-100 rounded-3 mb-3" alt="Tostado caliente servido en plato">
+                                            <span class="badge text-bg-light mb-2">Salado</span>
+                                            <h3 class="h4 mb-1">Tostado clásico</h3>
+                                            <p class="text-muted mb-3 small">Pan artesanal, jamón cocido y queso fundido.</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="price-tag">$4.500</span>
+                                                <button class="btn btn-primary btn-sm js-add-cart" type="button">+ Agregar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
                             </div>
                         </div>
-                    </article>
+
+                        <div class="carousel-item">
+                            <div class="row g-3 g-xl-4 justify-content-center">
+                                <article class="col-md-4">
+                                    <div class="featured-card card h-100 shadow-sm mx-auto">
+                                        <div class="card-body p-3">
+                                            <img src="img/productos-cafe/cheesecake-frutos-rojos.png" class="w-100 rounded-3 mb-3" alt="Cheesecake de frutos rojos">
+                                            <span class="badge text-bg-light mb-2">Dulce</span>
+                                            <h3 class="h4 mb-1">Cheesecake de frutos rojos</h3>
+                                            <p class="text-muted mb-3 small">Porción cremosa con salsa de frutos rojos.</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="price-tag">$4.100</span>
+                                                <button class="btn btn-primary btn-sm js-add-cart" type="button">+ Agregar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="col-md-4">
+                                    <div class="featured-card card h-100 shadow-sm mx-auto">
+                                        <div class="card-body p-3">
+                                            <img src="img/productos-cafe/iced-latte.png" class="w-100 rounded-3 mb-3" alt="Vaso de iced latte con hielo">
+                                            <span class="badge text-bg-light mb-2">Café frío</span>
+                                            <h3 class="h4 mb-1">Iced latte</h3>
+                                            <p class="text-muted mb-3 small">Cafe espresso con leche fria y hielo.</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="price-tag">$3.500</span>
+                                                <button class="btn btn-primary btn-sm js-add-cart" type="button">+ Agregar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="col-md-4">
+                                    <div class="featured-card card h-100 shadow-sm mx-auto">
+                                        <div class="card-body p-3">
+                                            <img src="img/productos-cafe/combo-merienda.png" class="w-100 rounded-3 mb-3" alt="Combo de cafe con leche y medialunas">
+                                            <span class="badge text-bg-light mb-2">Combo</span>
+                                            <h3 class="h4 mb-1">Combo merienda</h3>
+                                            <p class="text-muted mb-3 small">Cafe con leche y dos medialunas.</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="price-tag">$5.200</span>
+                                                <button class="btn btn-primary btn-sm js-add-cart" type="button">+ Agregar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#recomendadosCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#recomendadosCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+
+                <div id="recomendadosMobileCarousel" class="carousel slide recommended-carousel d-md-none" data-bs-ride="carousel" data-bs-interval="4500">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#recomendadosMobileCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Cappuccino clásico"></button>
+                        <button type="button" data-bs-target="#recomendadosMobileCarousel" data-bs-slide-to="1" aria-label="Croissant de manteca"></button>
+                        <button type="button" data-bs-target="#recomendadosMobileCarousel" data-bs-slide-to="2" aria-label="Tostado clásico"></button>
+                        <button type="button" data-bs-target="#recomendadosMobileCarousel" data-bs-slide-to="3" aria-label="Cheesecake de frutos rojos"></button>
+                        <button type="button" data-bs-target="#recomendadosMobileCarousel" data-bs-slide-to="4" aria-label="Iced latte"></button>
+                        <button type="button" data-bs-target="#recomendadosMobileCarousel" data-bs-slide-to="5" aria-label="Combo merienda"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <article class="featured-card card shadow-sm mx-auto">
+                                <div class="card-body p-3">
+                                    <img src="img/productos-cafe/cafe-caliente.png" class="w-100 rounded-3 mb-3" alt="Taza de cappuccino con arte latte sobre mesa de madera">
+                                    <span class="badge text-bg-light mb-2">Café caliente</span>
+                                    <h3 class="h4 mb-1">Cappuccino clásico</h3>
+                                    <p class="text-muted mb-3 small">Espresso, leche vaporizada y espuma cremosa.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="price-tag">$1.800</span>
+                                        <button class="btn btn-primary btn-sm js-add-cart" type="button">+ Agregar</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="carousel-item">
+                            <article class="featured-card card shadow-sm mx-auto">
+                                <div class="card-body p-3">
+                                    <img src="img/productos-cafe/croissant-manteca.png" class="w-100 rounded-3 mb-3" alt="Croissant de manteca recien horneado">
+                                    <span class="badge text-bg-light mb-2">Pastelería</span>
+                                    <h3 class="h4 mb-1">Croissant de manteca</h3>
+                                    <p class="text-muted mb-3 small">Horneado del día, dorado y crocante.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="price-tag">$2.600</span>
+                                        <button class="btn btn-primary btn-sm js-add-cart" type="button">+ Agregar</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="carousel-item">
+                            <article class="featured-card card shadow-sm mx-auto">
+                                <div class="card-body p-3">
+                                    <img src="img/productos-cafe/tostado-clasico.png" class="w-100 rounded-3 mb-3" alt="Tostado caliente servido en plato">
+                                    <span class="badge text-bg-light mb-2">Salado</span>
+                                    <h3 class="h4 mb-1">Tostado clásico</h3>
+                                    <p class="text-muted mb-3 small">Pan artesanal, jamón cocido y queso fundido.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="price-tag">$4.500</span>
+                                        <button class="btn btn-primary btn-sm js-add-cart" type="button">+ Agregar</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="carousel-item">
+                            <article class="featured-card card shadow-sm mx-auto">
+                                <div class="card-body p-3">
+                                    <img src="img/productos-cafe/cheesecake-frutos-rojos.png" class="w-100 rounded-3 mb-3" alt="Cheesecake de frutos rojos">
+                                    <span class="badge text-bg-light mb-2">Dulce</span>
+                                    <h3 class="h4 mb-1">Cheesecake de frutos rojos</h3>
+                                    <p class="text-muted mb-3 small">Porción cremosa con salsa de frutos rojos.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="price-tag">$4.100</span>
+                                        <button class="btn btn-primary btn-sm js-add-cart" type="button">+ Agregar</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="carousel-item">
+                            <article class="featured-card card shadow-sm mx-auto">
+                                <div class="card-body p-3">
+                                    <img src="img/productos-cafe/iced-latte.png" class="w-100 rounded-3 mb-3" alt="Vaso de iced latte con hielo">
+                                    <span class="badge text-bg-light mb-2">Café frío</span>
+                                    <h3 class="h4 mb-1">Iced latte</h3>
+                                    <p class="text-muted mb-3 small">Cafe espresso con leche fria y hielo.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="price-tag">$3.500</span>
+                                        <button class="btn btn-primary btn-sm js-add-cart" type="button">+ Agregar</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="carousel-item">
+                            <article class="featured-card card shadow-sm mx-auto">
+                                <div class="card-body p-3">
+                                    <img src="img/productos-cafe/combo-merienda.png" class="w-100 rounded-3 mb-3" alt="Combo de cafe con leche y medialunas">
+                                    <span class="badge text-bg-light mb-2">Combo</span>
+                                    <h3 class="h4 mb-1">Combo merienda</h3>
+                                    <p class="text-muted mb-3 small">Cafe con leche y dos medialunas.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="price-tag">$5.200</span>
+                                        <button class="btn btn-primary btn-sm js-add-cart" type="button">+ Agregar</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

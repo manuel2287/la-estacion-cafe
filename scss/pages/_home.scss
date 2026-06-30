@@ -48,6 +48,7 @@
         border: 0;
         border-radius: 1rem;
         background-color: #f8f7f5;
+        max-width: 420px;
 
         .card-body {
             display: flex;
@@ -69,6 +70,41 @@
         .btn {
             padding-inline: 0.95rem;
             font-size: 0.75rem;
+        }
+    }
+
+    .recommended-carousel {
+        padding: 0 3rem 2.5rem;
+
+        .carousel-inner {
+            padding-block: 0.25rem;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 2.75rem;
+            opacity: 1;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 50%;
+            background-color: var(--color-primary);
+            background-size: 55%;
+        }
+
+        .carousel-indicators {
+            bottom: 0;
+            margin-bottom: 0;
+
+            [data-bs-target] {
+                width: 0.75rem;
+                height: 0.75rem;
+                border-radius: 50%;
+                background-color: var(--color-primary);
+            }
         }
     }
 
@@ -124,6 +160,10 @@
             font-size: 1.35rem;
         }
 
+        .recommended-carousel {
+            padding-inline: 2.5rem;
+        }
+
         .shop-highlight {
             max-width: 760px;
         }
@@ -144,6 +184,15 @@
 
         .featured-card h3 {
             font-size: 1.2rem;
+        }
+
+        .recommended-carousel {
+            padding-inline: 0;
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                display: none;
+            }
         }
     }
 }
