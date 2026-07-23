@@ -4,8 +4,8 @@
     .detalle-pedido-main {
         background: #ddd5ca;
         min-height: calc(100vh - 96px);
-        padding-top: 2rem !important;
-        padding-bottom: 3rem !important;
+        padding-top: 1.25rem !important;
+        padding-bottom: 2rem !important;
     }
 
     .pedido-card {
@@ -16,18 +16,19 @@
         padding: 0 !important;
 
         > header {
+            align-items: flex-start !important;
             margin-bottom: 1.65rem !important;
 
             h1 {
                 color: #3f2d25;
-                font-size: clamp(1.8rem, 2.1vw, 2.25rem);
+                font-size: 1.65rem;
                 line-height: 1.12;
                 margin-bottom: 1.35rem !important;
             }
 
             p {
                 color: #4f4038 !important;
-                font-size: 1.16rem;
+                font-size: 1rem;
                 font-weight: 500;
             }
         }
@@ -35,7 +36,7 @@
 
     .pedido-mesa {
         color: #3f2d25 !important;
-        font-size: 1.15rem !important;
+        font-size: 1rem !important;
         font-weight: 800;
         line-height: 1.2;
     }
@@ -52,7 +53,10 @@
         border-radius: 0.35rem 0.35rem 0 0;
         margin-bottom: 0 !important;
         overflow-x: auto;
-        padding: 2.35rem 1.85rem 0;
+        padding-top: 2.35rem;
+        padding-right: 1rem;
+        padding-bottom: 0;
+        padding-left: 1rem;
     }
 
     .pedido-tabla {
@@ -60,7 +64,7 @@
         --bs-table-color: #3f2d25;
         border-color: rgba(78, 59, 50, 0.14);
         margin-bottom: 0;
-        min-width: 1040px;
+        min-width: 820px;
 
         th {
             border-bottom: 1px solid rgba(78, 59, 50, 0.18);
@@ -112,16 +116,16 @@
 
     .pedido-item-info {
         gap: 0.9rem !important;
-        min-width: 390px;
+        min-width: 320px;
     }
 
     .pedido-item-img {
         aspect-ratio: 1.45 / 1;
         border-radius: 0.28rem;
-        flex: 0 0 150px;
-        height: 102px;
+        flex: 0 0 112px;
+        height: 78px;
         object-fit: cover;
-        width: 150px;
+        width: 112px;
     }
 
     .qty-control {
@@ -202,7 +206,10 @@
         margin-left: 0;
         margin-right: 0;
         margin-top: 0 !important;
-        padding: 1.55rem 1.85rem 1.25rem;
+        padding-top: 1.55rem;
+        padding-right: 1rem;
+        padding-bottom: 1.25rem;
+        padding-left: 1rem;
 
         > [class*="col-"] {
             padding-left: 0;
@@ -210,7 +217,7 @@
         }
 
         > [class*="col-"]:last-child {
-            padding-left: 5rem;
+            padding-left: 0;
         }
 
         .form-label {
@@ -218,6 +225,15 @@
             font-size: 0.95rem;
             font-weight: 800 !important;
             margin-bottom: 0.75rem;
+        }
+
+        .d-flex {
+            flex-wrap: wrap;
+
+            .form-control,
+            .btn {
+                flex: 1 1 100%;
+            }
         }
     }
 
@@ -272,13 +288,18 @@
     .pedido-summary-row + .d-flex {
         border-radius: 0 0 0.35rem 0.35rem;
         margin-top: 0 !important;
-        padding: 1.25rem 11.4rem 4rem 1.85rem;
+        justify-content: stretch !important;
+        padding-top: 1.25rem;
+        padding-right: 1rem;
+        padding-bottom: 1.35rem;
+        padding-left: 1rem;
 
         .btn {
             border-radius: 0.22rem;
             font-size: 0.76rem;
             min-width: 136px;
             padding: 0.72rem 1rem;
+            flex: 1 1 100%;
         }
     }
 
@@ -298,7 +319,73 @@
         margin-top: 0 !important;
     }
 
-    @media (max-width: 1199.98px) {
+    @media (min-width: 768px) {
+        .detalle-pedido-main {
+            padding-top: 2rem !important;
+            padding-bottom: 3rem !important;
+        }
+
+        .pedido-card > header h1 {
+            font-size: clamp(1.8rem, 2.1vw, 2.25rem);
+        }
+
+        .pedido-tabla-wrap {
+            padding-right: 1.85rem;
+            padding-left: 1.85rem;
+        }
+
+        .pedido-summary-row {
+            padding-right: 1.85rem;
+            padding-left: 1.85rem;
+
+            .d-flex {
+                flex-wrap: nowrap;
+
+                .form-control,
+                .btn {
+                    flex: 0 1 auto;
+                }
+            }
+        }
+
+        .pedido-summary-row + .d-flex {
+            justify-content: flex-end !important;
+            padding-right: 1.85rem;
+            padding-bottom: 4rem;
+
+            .btn {
+                flex: 0 1 auto;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        .pedido-card > header {
+            align-items: flex-end !important;
+
+            p {
+                font-size: 1.16rem;
+            }
+        }
+
+        .pedido-mesa {
+            font-size: 1.15rem !important;
+        }
+
+        .pedido-tabla {
+            min-width: 1040px;
+        }
+
+        .pedido-item-info {
+            min-width: 390px;
+        }
+
+        .pedido-item-img {
+            flex: 0 0 150px;
+            height: 102px;
+            width: 150px;
+        }
+
         .pedido-summary-row > [class*="col-"]:last-child {
             padding-left: 2.5rem;
         }
@@ -308,75 +395,13 @@
         }
     }
 
-    @media (max-width: 991.98px) {
-        .pedido-card > header {
-            align-items: flex-start !important;
-
-            p {
-                font-size: 1rem;
-            }
-        }
-
-        .pedido-mesa {
-            font-size: 1rem !important;
-        }
-
-        .pedido-tabla {
-            min-width: 820px;
-        }
-
-        .pedido-item-info {
-            min-width: 320px;
-        }
-
-        .pedido-item-img {
-            flex-basis: 112px;
-            height: 78px;
-            width: 112px;
-        }
-
+    @media (min-width: 1200px) {
         .pedido-summary-row > [class*="col-"]:last-child {
-            padding-left: 0;
+            padding-left: 5rem;
         }
 
         .pedido-summary-row + .d-flex {
-            padding-right: 1.85rem;
-        }
-    }
-
-    @media (max-width: 767.98px) {
-        .detalle-pedido-main {
-            padding-top: 1.25rem !important;
-            padding-bottom: 2rem !important;
-        }
-
-        .pedido-card > header h1 {
-            font-size: 1.65rem;
-        }
-
-        .pedido-tabla-wrap,
-        .pedido-summary-row,
-        .pedido-summary-row + .d-flex {
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-
-        .pedido-summary-row + .d-flex {
-            justify-content: stretch !important;
-            padding-bottom: 1.35rem;
-
-            .btn {
-                flex: 1 1 100%;
-            }
-        }
-
-        .pedido-summary-row .d-flex {
-            flex-wrap: wrap;
-
-            .form-control,
-            .btn {
-                flex: 1 1 100%;
-            }
+            padding-right: 11.4rem;
         }
     }
 }
