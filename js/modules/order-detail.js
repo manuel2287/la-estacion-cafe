@@ -57,7 +57,7 @@ export const initOrderDetail = () => {
             row.innerHTML = `
                 <td>
                     <div class="d-flex align-items-center gap-3 pedido-item-info">
-                        <img src="${escapeHtml(item.image || "img/productos-cafe/cafe-caliente.png")}" alt="${escapeHtml(item.title)}" class="pedido-item-img">
+                        <img src="${escapeHtml(item.image || "img/productos-cafe/cafe-caliente.png")}" alt="${escapeHtml(item.title)}" class="pedido-item-img" loading="lazy" decoding="async">
                         <div>
                             <h2 class="h6 mb-1">${escapeHtml(item.title)}</h2>
                             <p class="small text-muted mb-0">${escapeHtml(item.description || "Producto agregado al pedido.")}</p>
